@@ -1,53 +1,86 @@
-/* ===== PREMIUM BUTTONS ===== */
+/* =================================
+   FORCE DARK BACKGROUND (IMPORTANT)
+   ================================= */
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #111827 0%, #020617 65%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e5e7eb;
+}
+
+/* =================================
+   HEADER
+   ================================= */
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #ffffff;
+}
+
+header p {
+  margin-top: 10px;
+  color: #9ca3af;
+  font-size: 1.05rem;
+}
+
+/* =================================
+   CARD SECTIONS
+   ================================= */
+.card {
+  background: linear-gradient(180deg, #0f172a, #020617);
+  margin: 30px auto;
+  padding: 28px;
+  width: 92%;
+  max-width: 900px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+}
+
+.card h2 {
+  color: #f9fafb;
+  margin-bottom: 14px;
+  font-size: 1.4rem;
+}
+
+.card p,
+.card li {
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+.card ol {
+  padding-left: 20px;
+}
+
+.card ol li {
+  margin-bottom: 10px;
+}
+
+/* =================================
+   BUTTON WRAPPER
+   ================================= */
 .buttons {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
+/* =================================
+   BASE BUTTON STYLE
+   ================================= */
 .btn {
   display: inline-block;
-  padding: 14px 34px;
+  padding: 15px 36px;
   border-radius: 999px;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   text-decoration: none;
   color: #ffffff !important;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-  transition: all 0.3s ease;
-}
-
-/* Angel One – ORANGE */
-.btn.angel {
-  background: linear-gradient(135deg, #fb923c, #f97316);
-}
-.btn.angel:hover {
-  box-shadow: 0 0 25px rgba(249,115,22,0.8);
-  transform: translateY(-3px);
-}
-
-/* Upstox – PURPLE */
-.btn.upstox {
-  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
-}
-.btn.upstox:hover {
-  box-shadow: 0 0 25px rgba(139,92,246,0.8);
-  transform: translateY(-3px);
-}
-
-/* Airtel – RED */
-.btn.airtel {
-  background: linear-gradient(135deg, #f87171, #ef4444);
-}
-.btn.airtel:hover {
-  box-shadow: 0 0 25px rgba(239,68,68,0.8);
-  transform: translateY(-3px);
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
+  letter-spac
