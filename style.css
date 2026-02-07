@@ -146,9 +146,12 @@ header p {
   }
 }
 footer {
+  display: flex;
+  flex-direction: column;  /* items one below another */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  opacity: 0.7;
-  padding: 15px;
-  font-size: 14px;
+  opacity: 0.6;
 }
+
 
