@@ -1,14 +1,16 @@
 /* =================================
    FORCE DARK BACKGROUND (IMPORTANT)
    ================================= */
+/* ===== FORCE NEAR-BLACK BACKGROUND ===== */
 html, body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at top, #111827 0%, #020617 65%);
+  background-color: #0a0a0a; /* near-black */
   font-family: Arial, Helvetica, sans-serif;
   color: #e5e7eb;
 }
+
 
 /* =================================
    HEADER
