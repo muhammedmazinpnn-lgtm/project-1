@@ -68,21 +68,80 @@ header p {
 /* =================================
    BUTTON WRAPPER
    ================================= */
+/* ===============================
+   BUTTON CONTAINER
+   =============================== */
 .buttons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
-/* =================================
-   BASE BUTTON STYLE
-   ================================= */
+/* ===============================
+   BASE BUTTON (COMMON)
+   =============================== */
 .btn {
-  display: inline-block;
-  padding: 15px 36px;
+  padding: 14px 36px;
   border-radius: 999px;
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
   text-decoration: none;
   color: #ffffff !important;
-  letter-spac
+  background-clip: padding-box;
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.25),
+    inset 0 -1px 0 rgba(255,255,255,0.2);
+  transition: all 0.3s ease;
+}
+
+/* ===============================
+   ANGEL ONE (ORANGE)
+   =============================== */
+.btn.angel {
+  background: linear-gradient(180deg, #ff9f43, #ff7a18);
+}
+
+.btn.angel:hover {
+  box-shadow:
+    0 18px 35px rgba(255, 122, 24, 0.45),
+    inset 0 -1px 0 rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   UPSTOX (PURPLE)
+   =============================== */
+.btn.upstox {
+  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
+}
+
+.btn.upstox:hover {
+  box-shadow:
+    0 18px 35px rgba(139, 92, 246, 0.45),
+    inset 0 -1px 0 rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   AIRTEL (RED)
+   =============================== */
+.btn.airtel {
+  background: linear-gradient(180deg, #ff6b6b, #ef4444);
+}
+
+.btn.airtel:hover {
+  box-shadow:
+    0 18px 35px rgba(239, 68, 68, 0.45),
+    inset 0 -1px 0 rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   MOBILE
+   =============================== */
+@media (max-width: 600px) {
+  .btn {
+    width: 90%;
+    text-align: center;
+  }
+}
