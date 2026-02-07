@@ -1,60 +1,53 @@
-/* ===== BUTTON AREA ===== */
+/* ===== PREMIUM BUTTONS ===== */
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
   margin-top: 20px;
 }
 
-/* ===== BASE BUTTON ===== */
-.buttons a {
+.btn {
   display: inline-block;
-  min-width: 220px;
-  padding: 16px 32px;
+  padding: 14px 34px;
   border-radius: 999px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
-  text-align: center;
-  color: #ffffff;
+  color: #ffffff !important;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
   transition: all 0.3s ease;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* ===== ANGEL ONE (ORANGE) ===== */
-.buttons a[href*="Aone"] {
+/* Angel One – ORANGE */
+.btn.angel {
   background: linear-gradient(135deg, #fb923c, #f97316);
 }
-
-.buttons a[href*="Aone"]:hover {
-  box-shadow: 0 0 30px rgba(249, 115, 22, 0.8);
-  transform: translateY(-4px);
+.btn.angel:hover {
+  box-shadow: 0 0 25px rgba(249,115,22,0.8);
+  transform: translateY(-3px);
 }
 
-/* ===== UPSTOX (PURPLE) ===== */
-.buttons a[href*="Atl"] {
+/* Upstox – PURPLE */
+.btn.upstox {
   background: linear-gradient(135deg, #a78bfa, #8b5cf6);
 }
-
-.buttons a[href*="Atl"]:hover {
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
-  transform: translateY(-4px);
+.btn.upstox:hover {
+  box-shadow: 0 0 25px rgba(139,92,246,0.8);
+  transform: translateY(-3px);
 }
 
-/* ===== AIRTEL (RED) ===== */
-.buttons a[href*="Airtel"] {
+/* Airtel – RED */
+.btn.airtel {
   background: linear-gradient(135deg, #f87171, #ef4444);
 }
-
-.buttons a[href*="Airtel"]:hover {
-  box-shadow: 0 0 30px rgba(239, 68, 68, 0.8);
-  transform: translateY(-4px);
+.btn.airtel:hover {
+  box-shadow: 0 0 25px rgba(239,68,68,0.8);
+  transform: translateY(-3px);
 }
 
-/* ===== MOBILE ===== */
+/* Mobile */
 @media (max-width: 600px) {
-  .buttons a {
+  .btn {
     width: 100%;
+    text-align: center;
   }
 }
