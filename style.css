@@ -180,13 +180,15 @@ footer {
 }
 
 .faq-question::after {
-  content: "";
-  font-size: 1.4rem;
-  color: #38bdf8;
+  content: "˅";
+  font-size: 1rem;
+  color: #cbd5f5;
+  transition: transform 0.3s ease;
 }
 
+
 .faq-question.active::after {
-  content: "";
+  content: "^";
 }
 
 .faq-answer {
