@@ -180,7 +180,7 @@ footer {
 }
 
 .faq-question::after {
-  content: "+";
+  content: "";
   font-size: 1.4rem;
   color: #38bdf8;
 }
