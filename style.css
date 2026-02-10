@@ -186,7 +186,7 @@ footer {
 }
 
 .faq-question.active::after {
-  content: "−";
+  content: "";
 }
 
 .faq-answer {
