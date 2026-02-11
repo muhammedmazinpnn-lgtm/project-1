@@ -68,20 +68,25 @@ html, body {
 
 .logo {
   font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
 }
 
+/* Refer text */
 .logo .refer {
-  color:#FACC15 ; /* White */
+  color: #FFFFFF;
 }
 
+/* Big stylish X */
 .logo .x {
   color: #FACC15;
+  font-size: 2.3rem;        /* Bigger than Refer */
   font-weight: 900;
-  gap: 1px;
+  font-family: 'Arial Black', sans-serif;
+  margin-left: -3px;        /* Reduces space between Refer and X */
 }
-
 
 
 nav a{
