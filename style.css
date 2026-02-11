@@ -66,12 +66,19 @@ html, body {
     height:30px;
 }
 
-.logo span{
-    font-weight:600;
-    font-size:22px;
-    color: #FACC15;
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
+.logo .refer {
+  color: #FFFFFF; /* White */
+}
+
+.logo .x {
+  color: #FACC15; /* Gold */
+}
 
 
 nav a{
