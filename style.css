@@ -13,6 +13,37 @@ html, body {
 /* =================================
    HEADER
 ================================= */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #0f0f0f; /* dark theme */
+}
+.navbar{
+    position: fixed;
+    top:0;
+    width:100%;
+}
+
+
+.logo{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    opacity: 0.8;
+}
+
+nav a:hover{
+    opacity: 1;
+}
+
 header {
   text-align: center;
   padding: 50px 20px;
@@ -165,3 +196,4 @@ footer {
   color: #FFFFFF;
   font-size: 0.95rem;
 }
+
