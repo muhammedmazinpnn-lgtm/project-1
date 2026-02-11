@@ -82,11 +82,12 @@ html, body {
 /* Big stylish X */
 .logo .x {
   color: #FACC15;
-  font-size: 2.3rem;        /* Bigger than Refer */
+  font-size: 2.5rem;
   font-weight: 900;
-  font-family: 'Arial Black', sans-serif;
-  margin-left: -3px;        /* Reduces space between Refer and X */
+  font-family: Impact, sans-serif;
+  margin-left: -4px;
 }
+
 
 
 nav a{
