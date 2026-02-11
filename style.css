@@ -77,8 +77,10 @@ html, body {
 }
 
 .logo .x {
-  color: #FACC15; /* Gold */
+  color: #FACC15;
+  font-weight: 900;
 }
+
 
 
 nav a{
