@@ -1,20 +1,18 @@
 /* =================================
-   FORCE DARK BACKGROUND (IMPORTANT)
-   ================================= */
-/* ===== FORCE NEAR-BLACK BACKGROUND ===== */
+   GLOBAL BACKGROUND
+================================= */
 html, body {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #0a0a0a; /* near-blac */
+  background-color: #000000;   /* Pure Black */
   font-family: Arial, Helvetica, sans-serif;
-  color: #e5e7eb;
+  color: #FFFFFF;              /* White text */
 }
-
 
 /* =================================
    HEADER
-   ================================= */
+================================= */
 header {
   text-align: center;
   padding: 50px 20px;
@@ -22,38 +20,38 @@ header {
 
 header h1 {
   font-size: 2.2rem;
-  color: #ffffff;
+  color: #FACC15;   /* Gold */
 }
 
 header p {
   margin-top: 10px;
-  color: #9ca3af;
+  color: #d1d5db;
   font-size: 1.05rem;
 }
 
 /* =================================
    CARD SECTIONS
-   ================================= */
+================================= */
 .card {
-  background: linear-gradient(180deg, #0f172a, #020617);
+  background-color: #111827;  /* Dark card */
   margin: 30px auto;
   padding: 28px;
   width: 92%;
   max-width: 900px;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(250,204,21,0.15);
   box-shadow: 0 25px 60px rgba(0,0,0,0.7);
 }
 
 .card h2 {
-  color: #f9fafb;
+  color: #FACC15;   /* Gold headings */
   margin-bottom: 14px;
   font-size: 1.4rem;
 }
 
 .card p,
 .card li {
-  color: #d1d5db;
+  color: #FFFFFF;
   line-height: 1.7;
 }
 
@@ -66,107 +64,71 @@ header p {
 }
 
 /* =================================
-   BUTTON WRAPPER
-   ================================= */
-/* ===============================
    BUTTON CONTAINER
-   =============================== */
+================================= */
 .buttons {
   display: flex;
   justify-content: center;
   margin-top: 25px;
 }
 
-/* ===============================
-   BASE BUTTON (COMMON)
-   =============================== */
+/* =================================
+   BASE BUTTON
+================================= */
 .btn {
   padding: 14px 36px;
   border-radius: 999px;
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  color: #ffffff !important;
-  background-clip: padding-box;
-  box-shadow:
-    0 12px 25px rgba(0, 0, 0, 0.25),
-    inset 0 -1px 0 rgba(255,255,255,0.2);
+  background: linear-gradient(135deg, #FACC15, #eab308);
+  color: #000000 !important;
   transition: all 0.3s ease;
+  box-shadow: 0 12px 25px rgba(250,204,21,0.25);
 }
 
-/* ===============================
-   ANGEL ONE (ORANGE)
-   =============================== */
-.btn.angel {
-  background: linear-gradient(180deg, #ff9f43, #ff7a18);
+.btn:hover {
+  box-shadow: 0 18px 35px rgba(250,204,21,0.5);
+  transform: translateY(-3px);
 }
 
-.btn.angel:hover {
-  box-shadow:
-    0 18px 35px rgba(255, 122, 24, 0.45),
-    inset 0 -1px 0 rgba(255,255,255,0.3);
-  transform: translateY(-2px);
-}
-
-/* ===============================
-   UPSTOX (PURPLE)
-   =============================== */
-.btn.upstox {
-  background: linear-gradient(180deg, #a78bfa, #8b5cf6);
-}
-
-.btn.upstox:hover {
-  box-shadow:
-    0 18px 35px rgba(139, 92, 246, 0.45),
-    inset 0 -1px 0 rgba(255,255,255,0.3);
-  transform: translateY(-2px);
-}
-
-/* ===============================
-   AIRTEL (RED)
-   =============================== */
-.btn.airtel {
-  background: linear-gradient(180deg, #ff6b6b, #ef4444);
-}
-
-.btn.airtel:hover {
-  box-shadow:
-    0 18px 35px rgba(239, 68, 68, 0.45),
-    inset 0 -1px 0 rgba(255,255,255,0.3);
-  transform: translateY(-2px);
-}
-
-/* ===============================
+/* =================================
    MOBILE
-   =============================== */
+================================= */
 @media (max-width: 600px) {
   .btn {
     width: 90%;
     text-align: center;
   }
 }
+
+/* =================================
+   FOOTER
+================================= */
 footer {
   display: flex;
-  flex-direction: column;  /* items one below another */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0.6;
+  opacity: 0.7;
+  color: #FACC15;
 }
-/* ===============================
+
+/* =================================
    FAQ ACCORDION
-   =============================== */
+================================= */
 .faq-item {
   margin-top: 15px;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(250,204,21,0.15);
 }
 
 .faq-question {
   width: 100%;
-  background: #020617;
-  color: #e5e7eb;
+  background: #111827;
+  color: #FFFFFF;
   padding: 16px 20px;
   font-size: 1rem;
   font-weight: 600;
@@ -182,28 +144,24 @@ footer {
 .faq-question::after {
   content: "˅";
   font-size: 1rem;
-  color: #cbd5f5;
+  color: #FACC15;
   transition: transform 0.3s ease;
 }
 
-
 .faq-question.active::after {
-  content: "^";
+  transform: rotate(180deg);
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  background: #020617;
+  background: #111827;
   transition: max-height 0.3s ease;
 }
 
 .faq-answer p {
   padding: 16px 20px;
   margin: 0;
-  color: #cbd5f5;
+  color: #FFFFFF;
   font-size: 0.95rem;
 }
-
-
-
