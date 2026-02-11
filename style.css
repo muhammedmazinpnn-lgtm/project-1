@@ -73,12 +73,13 @@ html, body {
 }
 
 .logo .refer {
-  color: #FFFFFF; /* White */
+  color:#FACC15 ; /* White */
 }
 
 .logo .x {
   color: #FACC15;
   font-weight: 900;
+  gap: 1px;
 }
 
 
