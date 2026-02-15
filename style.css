@@ -8,16 +8,9 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
 
-  background: radial-gradient(
-      circle at 20% 20%,
-      rgba(174,134,37,0.12),
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 80% 0%,
-      rgba(247,239,138,0.08),
-      transparent 40%
-    ),
+  background:
+    radial-gradient(circle at 20% 20%, rgba(174,134,37,0.12), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(247,239,138,0.08), transparent 40%),
     #000000;
 
   background-size: 200% 200%;
@@ -33,38 +26,31 @@ html, body {
 /* =================================
    NAVBAR
 ================================= */
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 40px;
-  background:#0f0f0f;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #0f0f0f;
   border-bottom: 1px solid #AE8625;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:3px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 3px;
   font-size: 1.8rem;
   font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
-.logo img{
+.logo img {
   height: 80px;
 }
 
 /* Metallic Gradient Logo */
 .logo .refer,
 .logo .x {
-  background: linear-gradient(
-    90deg,
-    #AE8625,
-    #F7EF8A,
-    #D2AC47,
-    #EDC967
-  );
+  background: linear-gradient(90deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -77,21 +63,21 @@ html, body {
   margin-left: -4px;
 }
 
-nav a{
-  text-decoration:none;
-  margin-left:20px;
+nav a {
+  text-decoration: none;
+  margin-left: 20px;
   font-weight: 500;
   color: #FFFFFF;
   transition: 0.3s ease;
 }
 
-nav a:hover{
+nav a:hover {
   color: #F7EF8A;
   text-shadow: 0 0 8px #F7EF8A;
 }
 
 /* =================================
-   HERO SECTION
+   HERO
 ================================= */
 header {
   text-align: center;
@@ -100,14 +86,7 @@ header {
 
 header h1 {
   font-size: 2.2rem;
-  background: linear-gradient(
-    90deg,
-    #AE8625,
-    #F7EF8A,
-    #D2AC47,
-    #F7EF8A,
-    #EDC967
-  );
+  background: linear-gradient(90deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -125,7 +104,7 @@ header p {
 }
 
 /* =================================
-   GLASS LUXURY CARDS
+   GLASS CARDS
 ================================= */
 .card {
   background: rgba(17, 24, 39, 0.6);
@@ -137,7 +116,7 @@ header p {
   max-width: 900px;
   border-radius: 20px;
   border: 1px solid rgba(174,134,37,0.35);
-  box-shadow: 
+  box-shadow:
     0 0 20px rgba(174,134,37,0.2),
     0 25px 60px rgba(0,0,0,0.8);
   transition: 0.3s ease;
@@ -145,28 +124,21 @@ header p {
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 
-    0 0 30px rgba(247,239,138,0.4),
+  box-shadow:
+    0 0 35px rgba(247,239,138,0.5),
     0 30px 80px rgba(0,0,0,0.9);
 }
 
 .card h2 {
   margin-bottom: 14px;
   font-size: 1.4rem;
-  background: linear-gradient(
-    90deg,
-    #AE8625,
-    #F7EF8A,
-    #D2AC47,
-    #EDC967
-  );
+  background: linear-gradient(90deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .card p,
 .card li {
-  color: #FFFFFF;
   line-height: 1.7;
 }
 
@@ -179,7 +151,7 @@ header p {
 }
 
 /* =================================
-   FIRST TWO CARDS SAME ROW
+   FIRST TWO CARDS SIDE BY SIDE
 ================================= */
 .card-row {
   display: flex;
@@ -195,70 +167,122 @@ header p {
 }
 
 /* =================================
-   BUTTON CONTAINER
+   CAMPAIGN GRID
 ================================= */
-.buttons {
+.campaign-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 92%;
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+/* =================================
+   GOLD CAMPAIGN CARD
+================================= */
+.campaign-card {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(174,134,37,0.35);
+  box-shadow: 0 0 20px rgba(174,134,37,0.2);
+  transition: 0.3s ease;
+}
+
+.campaign-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(247,239,138,0.6);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 16px;
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background: linear-gradient(135deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+  color: #000;
+  box-shadow: 0 0 20px rgba(247,239,138,0.4);
 }
 
-/* =================================
-   METALLIC GOLD BUTTON
-================================= */
-.btn {
-  position: relative;
-  overflow: hidden;
-  padding: 14px 36px;
+.verified {
+  background: linear-gradient(90deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+  color: #000;
+  font-size: 0.7rem;
+  padding: 6px 14px;
   border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  background: linear-gradient(
-    120deg,
-    #AE8625,
-    #F7EF8A,
-    #D2AC47,
-    #EDC967,
-    #AE8625
-  );
-  color: #000000 !important;
-  transition: all 0.3s ease;
-  box-shadow: 0 12px 25px rgba(174,134,37,0.35);
+  font-weight: 700;
 }
 
-.btn:hover {
-  box-shadow: 0 18px 35px rgba(247,239,138,0.6);
-  transform: translateY(-3px);
+.campaign-card h3 {
+  margin-top: 18px;
+  font-size: 1.2rem;
 }
 
-/* Shine Effect */
-.btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -75%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.6),
-    transparent
-  );
-  transform: skewX(-25deg);
+.category {
+  opacity: 0.6;
+  margin-bottom: 20px;
 }
 
-.btn:hover::before {
-  animation: shine 1s ease forwards;
+.info-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-@keyframes shine {
-  100% { left: 125%; }
+.info-box {
+  flex: 1;
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(174,134,37,0.2);
+}
+
+.info-box span {
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+
+.info-box h4 {
+  margin-top: 8px;
+  background: linear-gradient(90deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* =================================
-   FAQ ACCORDION
+   GOLD BUTTON
+================================= */
+.start-btn {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(120deg, #AE8625, #F7EF8A, #D2AC47, #EDC967, #AE8625);
+  color: #000;
+  transition: 0.3s ease;
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 35px rgba(247,239,138,0.6);
+}
+
+/* =================================
+   FAQ
 ================================= */
 .faq-item {
   margin-top: 15px;
@@ -272,50 +296,21 @@ header p {
   background: rgba(17,24,39,0.6);
   color: #FFFFFF;
   padding: 16px 20px;
-  font-size: 1rem;
-  font-weight: 600;
   border: none;
-  outline: none;
   cursor: pointer;
   text-align: left;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-question::after {
-  content: "˅";
-  font-size: 1rem;
-  color: #D2AC47;
-  transition: transform 0.3s ease;
-}
-
-.faq-question.active::after {
-  transform: rotate(180deg);
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  background: rgba(17,24,39,0.6);
   transition: max-height 0.3s ease;
-}
-
-.faq-answer p {
-  padding: 16px 20px;
-  margin: 0;
-  color: #FFFFFF;
-  font-size: 0.95rem;
 }
 
 /* =================================
    FOOTER
 ================================= */
 footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   opacity: 0.7;
   color: #D2AC47;
@@ -324,7 +319,7 @@ footer {
 }
 
 /* =================================
-   MOBILE RESPONSIVE
+   MOBILE
 ================================= */
 @media (max-width: 768px) {
 
@@ -332,9 +327,8 @@ footer {
     flex-direction: column;
   }
 
-  .btn {
-    width: 90%;
-    text-align: center;
+  .info-row {
+    flex-direction: column;
   }
 
 }
