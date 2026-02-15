@@ -1,5 +1,5 @@
 /* =================================
-   GLOBAL BACKGROUND
+   GLOBAL BACKGROUND (METALLIC GOLD GLOW)
 ================================= */
 html, body {
   min-height: 100%;
@@ -10,12 +10,12 @@ html, body {
 
   background: radial-gradient(
       circle at 20% 20%,
-      rgba(250, 204, 21, 0.08),
+      rgba(174,134,37,0.10),
       transparent 40%
     ),
     radial-gradient(
       circle at 80% 0%,
-      rgba(250, 204, 21, 0.06),
+      rgba(247,239,138,0.08),
       transparent 40%
     ),
     #000000;
@@ -23,83 +23,73 @@ html, body {
   background-size: 200% 200%;
   animation: goldMove 12s ease infinite;
 }
+
 @keyframes goldMove {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 0%; }
 }
-
-
-
 
 /* =================================
-   HEADER
+   NAVBAR
 ================================= */
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: #0f0f0f; /* dark theme */
-}
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    background:#0f0f0f;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#0f0f0f;
+  border-bottom: 1px solid #AE8625;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:3px;
-}
-
-.logo img{
-    height:30px;
-}
-
-.logo {
+  display:flex;
+  align-items:center;
+  gap:3px;
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  display: flex;
-  align-items: center;
 }
 
-/* Refer text */
-.logo .refer {
-  color:#FACC15;
+.logo img{
+  height:30px;
 }
 
-/* Big stylish X */
+/* Metallic Gradient Logo */
+.logo .refer,
 .logo .x {
-  color: #FACC15;
+  background: linear-gradient(
+    90deg,
+    #AE8625,
+    #F7EF8A,
+    #D2AC47,
+    #EDC967
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo .x {
   font-size: 2.5rem;
   font-weight: 900;
   margin-left: -4px;
 }
 
-
-
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight: 500;
+  color: #FFFFFF;
+  transition: 0.3s ease;
 }
-
 
 nav a:hover{
-    opacity: 1;
+  color: #D2AC47;
 }
 
+/* =================================
+   HERO SECTION
+================================= */
 header {
   text-align: center;
   padding: 50px 20px;
@@ -107,7 +97,15 @@ header {
 
 header h1 {
   font-size: 2.2rem;
-  color: #FACC15;   /* Gold */
+  background: linear-gradient(
+    90deg,
+    #AE8625,
+    #F7EF8A,
+    #D2AC47,
+    #EDC967
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header p {
@@ -120,20 +118,28 @@ header p {
    CARD SECTIONS
 ================================= */
 .card {
-  background-color: #111827;  /* Dark card */
+  background-color: #111827;
   margin: 30px auto;
   padding: 28px;
   width: 92%;
   max-width: 900px;
   border-radius: 18px;
-  border: 1px solid rgba(250,204,21,0.15);
+  border: 1px solid rgba(174,134,37,0.25);
   box-shadow: 0 25px 60px rgba(0,0,0,0.7);
 }
 
 .card h2 {
-  color: #FACC15;   /* Gold headings */
   margin-bottom: 14px;
   font-size: 1.4rem;
+  background: linear-gradient(
+    90deg,
+    #AE8625,
+    #F7EF8A,
+    #D2AC47,
+    #EDC967
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .card p,
@@ -160,7 +166,7 @@ header p {
 }
 
 /* =================================
-   BASE BUTTON
+   METALLIC GOLD BUTTON
 ================================= */
 .btn {
   padding: 14px 36px;
@@ -168,14 +174,21 @@ header p {
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-  background: linear-gradient(135deg, #FACC15, #eab308);
+  background: linear-gradient(
+    120deg,
+    #AE8625,
+    #F7EF8A,
+    #D2AC47,
+    #EDC967,
+    #AE8625
+  );
   color: #000000 !important;
   transition: all 0.3s ease;
-  box-shadow: 0 12px 25px rgba(250,204,21,0.25);
+  box-shadow: 0 12px 25px rgba(174,134,37,0.35);
 }
 
 .btn:hover {
-  box-shadow: 0 18px 35px rgba(250,204,21,0.5);
+  box-shadow: 0 18px 35px rgba(247,239,138,0.6);
   transform: translateY(-3px);
 }
 
@@ -199,7 +212,9 @@ footer {
   align-items: center;
   text-align: center;
   opacity: 0.7;
-  color: #FACC15;
+  color: #D2AC47;
+  margin-top: 40px;
+  padding: 20px 0;
 }
 
 /* =================================
@@ -209,7 +224,7 @@ footer {
   margin-top: 15px;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(250,204,21,0.15);
+  border: 1px solid rgba(174,134,37,0.25);
 }
 
 .faq-question {
@@ -231,7 +246,7 @@ footer {
 .faq-question::after {
   content: "˅";
   font-size: 1rem;
-  color: #FACC15;
+  color: #D2AC47;
   transition: transform 0.3s ease;
 }
 
@@ -252,4 +267,3 @@ footer {
   color: #FFFFFF;
   font-size: 0.95rem;
 }
-
