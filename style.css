@@ -1,5 +1,5 @@
 /* =================================
-   GLOBAL BACKGROUND (METALLIC GOLD GLOW)
+   GLOBAL BACKGROUND (ANIMATED GOLD GLOW)
 ================================= */
 html, body {
   min-height: 100%;
@@ -10,7 +10,7 @@ html, body {
 
   background: radial-gradient(
       circle at 20% 20%,
-      rgba(174,134,37,0.10),
+      rgba(174,134,37,0.12),
       transparent 40%
     ),
     radial-gradient(
@@ -21,7 +21,7 @@ html, body {
     #000000;
 
   background-size: 200% 200%;
-  animation: goldMove 12s ease infinite;
+  animation: goldMove 14s ease infinite;
 }
 
 @keyframes goldMove {
@@ -65,8 +65,10 @@ html, body {
     #D2AC47,
     #EDC967
   );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: textShine 4s linear infinite;
 }
 
 .logo .x {
@@ -84,7 +86,8 @@ nav a{
 }
 
 nav a:hover{
-  color: #D2AC47;
+  color: #F7EF8A;
+  text-shadow: 0 0 8px #F7EF8A;
 }
 
 /* =================================
@@ -102,10 +105,17 @@ header h1 {
     #AE8625,
     #F7EF8A,
     #D2AC47,
+    #F7EF8A,
     #EDC967
   );
+  background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: textShine 5s linear infinite;
+}
+
+@keyframes textShine {
+  to { background-position: 200% center; }
 }
 
 header p {
@@ -115,17 +125,29 @@ header p {
 }
 
 /* =================================
-   CARD SECTIONS
+   GLASS LUXURY CARDS
 ================================= */
 .card {
-  background-color: #111827;
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   margin: 30px auto;
   padding: 28px;
   width: 92%;
   max-width: 900px;
-  border-radius: 18px;
-  border: 1px solid rgba(174,134,37,0.25);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+  border-radius: 20px;
+  border: 1px solid rgba(174,134,37,0.35);
+  box-shadow: 
+    0 0 20px rgba(174,134,37,0.2),
+    0 25px 60px rgba(0,0,0,0.8);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 
+    0 0 30px rgba(247,239,138,0.4),
+    0 30px 80px rgba(0,0,0,0.9);
 }
 
 .card h2 {
@@ -166,9 +188,11 @@ header p {
 }
 
 /* =================================
-   METALLIC GOLD BUTTON
+   METALLIC GOLD BUTTON (ANIMATED)
 ================================= */
 .btn {
+  position: relative;
+  overflow: hidden;
   padding: 14px 36px;
   border-radius: 999px;
   font-size: 1rem;
@@ -192,29 +216,29 @@ header p {
   transform: translateY(-3px);
 }
 
-/* =================================
-   MOBILE
-================================= */
-@media (max-width: 600px) {
-  .btn {
-    width: 90%;
-    text-align: center;
-  }
+/* Shine Effect */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: skewX(-25deg);
 }
 
-/* =================================
-   FOOTER
-================================= */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0.7;
-  color: #D2AC47;
-  margin-top: 40px;
-  padding: 20px 0;
+.btn:hover::before {
+  animation: shine 1s ease forwards;
+}
+
+@keyframes shine {
+  100% { left: 125%; }
 }
 
 /* =================================
@@ -229,7 +253,7 @@ footer {
 
 .faq-question {
   width: 100%;
-  background: #111827;
+  background: rgba(17,24,39,0.6);
   color: #FFFFFF;
   padding: 16px 20px;
   font-size: 1rem;
@@ -257,7 +281,7 @@ footer {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  background: #111827;
+  background: rgba(17,24,39,0.6);
   transition: max-height 0.3s ease;
 }
 
@@ -266,4 +290,29 @@ footer {
   margin: 0;
   color: #FFFFFF;
   font-size: 0.95rem;
+}
+
+/* =================================
+   FOOTER
+================================= */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0.7;
+  color: #D2AC47;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+/* =================================
+   MOBILE
+================================= */
+@media (max-width: 600px) {
+  .btn {
+    width: 90%;
+    text-align: center;
+  }
 }
