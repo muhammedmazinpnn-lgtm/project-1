@@ -179,6 +179,22 @@ header p {
 }
 
 /* =================================
+   FIRST TWO CARDS SAME ROW
+================================= */
+.card-row {
+  display: flex;
+  gap: 30px;
+  width: 92%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.card-row .card {
+  flex: 1;
+  margin: 0;
+}
+
+/* =================================
    BUTTON CONTAINER
 ================================= */
 .buttons {
@@ -188,7 +204,7 @@ header p {
 }
 
 /* =================================
-   METALLIC GOLD BUTTON (ANIMATED)
+   METALLIC GOLD BUTTON
 ================================= */
 .btn {
   position: relative;
@@ -308,11 +324,17 @@ footer {
 }
 
 /* =================================
-   MOBILE
+   MOBILE RESPONSIVE
 ================================= */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
+  .card-row {
+    flex-direction: column;
+  }
+
   .btn {
     width: 90%;
     text-align: center;
   }
+
 }
