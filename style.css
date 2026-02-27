@@ -328,7 +328,10 @@ header p {
   margin: 0;
   /* Removing default margin for accurate height scaling */
   font-size: 1rem;
-  color: #FFFFFF;
+  background: linear-gradient(90deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* =================================
