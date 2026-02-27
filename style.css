@@ -321,14 +321,11 @@ header p {
 .faq-question {
   width: 100%;
   background: rgba(17, 24, 39, 0.6);
+  color: #FFFFFF;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   text-align: left;
-  background-image: white;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: 600;
   font-size: 1.05rem;
 }
